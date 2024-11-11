@@ -19,7 +19,7 @@ status
 # odoo filestore
 odoo/filestore
 # maintenance migration scripts
-addons
+addons/*
 
 odoo/addons/base/maintenance
 # window installation config file
