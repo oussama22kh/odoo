@@ -1,9 +1,0 @@
-[options]
-addons_path = /home/ubuntu/odoo-18.0/addons,
-	/home/ubuntu/odoo-18.0/odoo/addons,
-db_host = odoo-1.c3os88gmwswy.eu-west-3.rds.amazonaws.com
-db_password = Nz4MKrZt!hx-UtR
-db_user = odoo
-db_name = odoo
-admin_passwd = $pbkdf2-sha512$600000$KCXkvLcWAoAQYgxB6H3vXQ$IOPqxxN0HWM8f9nLyMDyCZ5jraLKzX5rl9ZHPSuCRT00opP8JnyXm5p63JfCs.W0B5JQYUUaaLitce77v7.iFQ
-
