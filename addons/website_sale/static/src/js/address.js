@@ -27,6 +27,9 @@ publicWidget.registry.websiteSaleAddress = publicWidget.Widget.extend({
         this.addressType = this.addressForm['address_type'].value;
         this.countryCode = this.addressForm.dataset.companyCountryCode;
         this.requiredFields = this.addressForm.required_fields.value.split(',');
+        this.addressForm.querySelector("#o_email").value= "unkown@email.com";
+        this.addressForm.querySelector("#o_zip").value= "16000";
+        this.addressForm.querySelector("#o_country_id").value="Algeria";
     },
 
     /**
@@ -112,7 +115,7 @@ publicWidget.registry.websiteSaleAddress = publicWidget.Widget.extend({
                 this._getInputDiv('zip').before(this._getInputDiv('city'));
             }
 
-            var all_fields = ['street', 'zip', 'city'];
+            var all_fields = ['street', 'city'];
             all_fields.forEach((fname) => {
                 if (data.fields.includes(fname)) {
                     this._showInput(fname);
