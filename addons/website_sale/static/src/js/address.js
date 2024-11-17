@@ -29,7 +29,7 @@ publicWidget.registry.websiteSaleAddress = publicWidget.Widget.extend({
         this.requiredFields = this.addressForm.required_fields.value.split(',');
         this.addressForm.querySelector("#o_email").value= "unkown@email.com";
         this.addressForm.querySelector("#o_zip").value= "16000";
-        this.addressForm.querySelector("#o_country_id").value="Algeria";
+        this.addressForm.querySelector("#o_country_id").value="62";
     },
 
     /**
