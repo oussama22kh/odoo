@@ -2530,8 +2530,7 @@
                                                 </t>
                                             </select>
                                         </div>
-                                        <div id="div_state" class="col-lg-6 mb-2"
-                                             t-att-style="not country_states and">
+                                        <div id="div_state" class="col-lg-6 mb-2">
                                             <label class="col-form-label" for="o_state_id">State / Province</label>
                                             <select id="o_state_id" name="state_id" class="form-select">
                                                 <option value="">State / Province...</option>
