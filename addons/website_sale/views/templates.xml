@@ -2493,40 +2493,18 @@
                                                 </div>
                                             </t>
                                         </t>-->
+                                        <div class="row">
                                         <div id="div_street" class="col-lg-6 mb-2">
                                             <label class="col-form-label" for="o_street">Street and Number</label>
                                             <input id="o_street" type="text" name="street" class="form-control" t-att-value="partner_sudo.street"/>
                                         </div>
+                                            </div>
                                         <!--<div id="div_street2" class="col-lg-12 mb-2">
                                             <label class="col-form-label label-optional" for="o_street2">Apartment, suite, etc.</label>
                                             <input id="o_street2" type="text" name="street2" class="form-control" t-att-value="partner_sudo.street2" />
                                         </div>-->
-                                       <!-- <div class="w-100"/>-->
-                                        <t t-if="zip_before_city">
-                                            <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
-                                                <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
-                                                <input id="o_zip" type="text" name="zip" class="form-control" t-att-value="partner_sudo.zip"/>
-                                            </div>
-                                        </t>
-                                        <t t-if="not zip_before_city">
-                                            <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
-                                                <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
-                                                <input id="o_zip" type="text" name="zip" class="form-control" t-att-value="partner_sudo.zip"/>
-                                            </div>
-                                        </t>
-                                        <div class="w-100"/>
-                                        <div id="div_country" class="col-lg-6 mb-2" style="display:none;">
-                                            <label class="col-form-label" for="o_country_id">Country</label>
-                                            <select id="o_country_id" name="country_id" class="form-select">
-                                                <option value="">Country...</option>
-                                                <t t-foreach="countries" t-as="c">
-                                                    <option t-att-value="c.id" t-att-selected="c.id == country.id" t-att-code="c.code">
-                                                        <t t-esc="c.name" />
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                        <div id="div_state" class="col-lg-6 mb-2">
+                                       <div class="w-100"/>
+                                          <div id="div_state" class="col-lg-6 mb-2">
                                             <label class="col-form-label" for="o_state_id">State / Province</label>
                                             <select id="o_state_id" name="state_id" class="form-select">
                                                 <option value="">State / Province...</option>
@@ -2541,10 +2519,38 @@
                                                 </t>-->
                                             </select>
                                         </div>
-                                        <div id="div_city" class="col-md-6 mb-2">
+                                        <div class="row">
+                                        <t t-if="zip_before_city">
+                                            <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
+                                                <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
+                                                <input id="o_zip" type="text" name="zip" class="form-control" t-att-value="partner_sudo.zip"/>
+                                            </div>
+                                        </t>
+                                        <t t-if="not zip_before_city">
+                                            <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
+                                                <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
+                                                <input id="o_zip" type="text" name="zip" class="form-control" t-att-value="partner_sudo.zip"/>
+                                            </div>
+                                        </t>
+                                          <div id="div_city" class="col-md-6 mb-2">
                                             <label class="col-form-label" for="o_city">City</label>
                                             <input id="o_city" type="text" name="city" class="form-control" t-att-value="partner_sudo.city"/>
                                         </div>
+                                             </div>
+                                        <div class="w-100"/>
+                                        <div id="div_country" class="col-lg-6 mb-2" style="display:none;">
+                                            <label class="col-form-label" for="o_country_id">Country</label>
+                                            <select id="o_country_id" name="country_id" class="form-select">
+                                                <option value="">Country...</option>
+                                                <t t-foreach="countries" t-as="c">
+                                                    <option t-att-value="c.id" t-att-selected="c.id == country.id" t-att-code="c.code">
+                                                        <t t-esc="c.name" />
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+
+
                                     </div>
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" t-nocache="The csrf token must always be up to date."/>
                                     <input type="hidden" name="address_type" t-att-value="address_type"/>
