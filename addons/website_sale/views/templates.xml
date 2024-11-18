@@ -2501,17 +2501,13 @@
                                             <label class="col-form-label label-optional" for="o_street2">Apartment, suite, etc.</label>
                                             <input id="o_street2" type="text" name="street2" class="form-control" t-att-value="partner_sudo.street2" />
                                         </div>-->
-                                        <div class="w-100"/>
+                                       <!-- <div class="w-100"/>-->
                                         <t t-if="zip_before_city">
                                             <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
                                                 <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
                                                 <input id="o_zip" type="text" name="zip" class="form-control" t-att-value="partner_sudo.zip"/>
                                             </div>
                                         </t>
-                                        <div id="div_city" class="col-md-6 mb-2">
-                                            <label class="col-form-label" for="o_city">City</label>
-                                            <input id="o_city" type="text" name="city" class="form-control" t-att-value="partner_sudo.city"/>
-                                        </div>
                                         <t t-if="not zip_before_city">
                                             <div id="div_zip" class="col-md-4 mb-2" style="display:none;">
                                                 <label class="col-form-label label-optional" for="o_zip">Zip Code</label>
@@ -2544,6 +2540,10 @@
                                                     </option>
                                                 </t>-->
                                             </select>
+                                        </div>
+                                        <div id="div_city" class="col-md-6 mb-2">
+                                            <label class="col-form-label" for="o_city">City</label>
+                                            <input id="o_city" type="text" name="city" class="form-control" t-att-value="partner_sudo.city"/>
                                         </div>
                                     </div>
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" t-nocache="The csrf token must always be up to date."/>
