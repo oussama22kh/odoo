@@ -61,6 +61,7 @@ class PaymentTransaction(models.Model):
                 res['api_url'] = response_data["checkout_url"]
         except Exception as e:
             _logger.error(f"❌ Chargily API Error: {e}")
+        res['payment_method_line_id'] = self.provider_id._get_default_payment_method().id
 
         return res
 
