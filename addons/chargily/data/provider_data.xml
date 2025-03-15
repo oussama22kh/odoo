@@ -1,0 +1,16 @@
+<odoo>
+
+    <record id="payment_provider_chargily" model="payment.provider">
+        <field name="name">Chargily</field>
+        <field name="module_id" ref="base.module_chargily"/>
+        <field name="payment_method_ids"
+               eval="[Command.set([
+                         ref('payment.payment_method_card'),
+                     ])]"
+        />
+        <field name="available_currency_ids" eval="[(6, 0, [ref('base.DZD')])]"/>
+        <field name="code">chargily</field>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+
+    </record>
+</odoo>
